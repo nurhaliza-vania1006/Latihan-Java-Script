@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Java Script Nomer 3</title>
+</head>
+<body>
+    <!-- Nomer 2 Menghitung Biaya Parkir -->
+    <script>
+        //Input Jam Masuk
+        const JamMasuk = prompt('Jam Masuk ?');
+
+        //Input Jam Keluar
+        const JamKeluar = prompt('Jam Keluar ?');
+
+        //Selisih
+        const selisih = Number(JamKeluar) - Number(JamMasuk);
+
+        //tarif awal
+        const tarifawal = 3000;
+
+        //tarif 2 jam
+        if (selisih <= 2){
+            alert(`biaya keluaran : ${tarifawal}`);
+        } else {
+            const tarifakhir = tarifawal + (selisih-2) *1000;
+            alert(`biaya keluaran : ${tarifakhir}`)
+        }
+    </script>
+</body>
+</html>

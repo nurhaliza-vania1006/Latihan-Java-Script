@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Java Script Nomer 1</title>
+    <style>
+       button{
+           background-color: rgb(119, 200, 233);
+           border: 2px solid;
+           padding: 5px ;
+           border-radius: 3px;
+       }
+    </style>
+</head>
+<body>
+    <!-- Nomer 1 Hitung Luas dan Keliling Lingkaran -->
+    <h2>Hitung Luas dan Keliling Lingkaran</h2>
+   <input type="text" value="" placeholder="Masukkan Nilai Jari-jari" id="nilai">
+   <button onclick="hitung()">Hitung</button>
+   <br><br>
+   Hasil Luas :<br>
+   <input type="text" id="luas">
+   <br> <br>
+   Hasil Keliling : <br>
+   <input type="text" id="keliling">
+
+   <script>
+        function hitung() {
+            const phi = 3.14;
+            var luas;
+            var keliling;
+            var jari;
+	        r = parseFloat(document.getElementById("nilai").value);
+	        luas = phi * r * r
+	        keliling = 2 * phi * r;
+	        document.getElementById('luas').value = luas;
+	        document.getElementById('keliling').value = keliling;
+        }
+   </script>
+</body>
+</html>

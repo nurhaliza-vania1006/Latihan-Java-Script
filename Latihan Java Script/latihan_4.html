@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Java Script Nomer 4</title>
+</head>
+<body>
+    <!-- Nomer 1 Menghitung Jumlah Dua Bilangan -->
+    <h2>Menghitung Jumlah Dua Bilangan</h2>
+    <input type="text" id="angkapertama">
+    <h3>+</h3>
+    <input type="text" id="angkakedua" onchange="hasil()">
+    <h3>+</h3>
+    <input type="text" id="jumlah">
+
+    <script>
+       let angkapertama = document.getElementById("angkapertama")
+       let angkakedua = document.getElementById("angkakedua")
+       let jumlah = document.getElementById("jumlah")
+       let penampung
+
+       function hasil() {
+           penampung = parseInt(angkapertama.value) + parseInt(angkakedua.value);
+           jumlah.value = penampung
+           
+       }
+    </script>
+</body>
+</html>

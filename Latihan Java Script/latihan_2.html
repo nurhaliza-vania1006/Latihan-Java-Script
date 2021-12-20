@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Java Script Nomer 2</title>
+</head>
+<body>
+    <h2>Hitung Kurs Rupiah</h2>
+    <input type="text" id="nilaipertama" placeholder="Masukkan Nilai">
+    <select name="Pilihan" id="valas" onchange="nilai()">
+    <option value="#">Silahkan Pilih Mata Uang</option>
+    <option value="Dollar">Dollar</option>
+    </select>
+    <input type="text" id="hasil" placeholder="Hasil">
+
+    <script>
+        let nilaipertama = document.getElementById("nilaipertama")
+        let Dollar = document.getElementById("Dollar")
+        let hasil = document.getElementById("hasil")
+        let penampung
+        let format = new Intl.NumberFormat('id-ID');
+
+        function nilai() {
+            penampung = parseInt(nilaipertama.value) * 14650
+            hasil.value = "Rp. " + format.format(penampung)
+        }
+    </script>
+</body>
+</html>
